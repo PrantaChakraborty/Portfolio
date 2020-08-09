@@ -17,7 +17,7 @@ class Experience(models.Model):
     title = models.CharField(max_length=50)
     company_name = models.CharField(max_length=200)
     details = models.TextField(max_length=500)
-    start_date = models.DateField(default=date.today())
+    start_date = models.DateField(default=date.today)
     finish_date = models.DateField(default=date.today)
 
     def __str__(self):
@@ -28,7 +28,7 @@ class Education(models.Model):
     school_name = models.CharField(max_length=100)
     degree = models.CharField(max_length=100)
     gpa = models.FloatField(max_length=5)
-    start_date = models.DateField(default=date.today())
+    start_date = models.DateField(default=date.today)
     finish_date = models.DateField(default=date.today)
 
 
