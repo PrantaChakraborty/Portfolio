@@ -4,7 +4,8 @@ services:
 
   web:
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
+    #command: python /code/manage.py runserver 0.0.0.0:8000
+    command: gunicorn myportfolio.wsgi -b 0.0.0.0:8000 # new
     environment:
       - ENVIRONMENT=development
       - SECRET_KEY=d)$$p1e3pjb-6wu(*zz2te!mpw(7nr70q#n5kp91^yu+4_#539$$

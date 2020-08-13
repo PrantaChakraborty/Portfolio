@@ -15,7 +15,7 @@ class About(models.Model):
 
 class Experience(models.Model):
     title = models.CharField(max_length=50)
-    company_name = models.CharField(max_length=200)
+    company_name = models.CharField(max_length=200, null=True, blank=True)
     details = models.TextField(max_length=500)
     start_date = models.DateField(default=date.today)
     finish_date = models.DateField(default=date.today)
